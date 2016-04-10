@@ -1,0 +1,314 @@
+﻿<Page
+    x:Class="Controls.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="CheckBox" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <CheckBox Name="myCheckBox"
+                      Content="Check"
+                      Tapped="myCheckBox_Tapped"
+                      />
+            <TextBlock Name="CheckBoxState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="RadioButton" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <RadioButton Name="YesRadioBtn"
+                         Content="Yes" 
+                         GroupName="myGroup"
+                         Checked="RadioButton_Checked"
+                         />
+            <RadioButton Name="NoRadioBtn"
+                         Content="No" 
+                         GroupName="myGroup"
+                         Checked="RadioButton_Checked"
+                         />
+            <TextBlock Name="RadioBtnState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="ComboBox" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <ComboBox Name="myComboBox" 
+                      SelectionChanged="myComboBox_SelectionChanged"
+                      >
+                <ComboBoxItem Content="One" />
+                <ComboBoxItem Content="Two" />
+                <ComboBoxItem Content="Three" />
+            </ComboBox>
+            <TextBlock Name="ComboBoxState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="ListBox" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <ListBox Name="myListBox"
+                     SelectionChanged="ListBox_SelectionChanged" 
+                     SelectionMode="Multiple"
+                     >
+                <ListBoxItem Content="ListOne" IsSelected="True"/>
+                <ListBoxItem Content="ListTwo" />
+                <ListBoxItem Content="ListThree" />
+            </ListBox>
+            <TextBlock Name="ListBoxState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Text="Image" 
+                   VerticalAlignment="Center"/>
+        <Image Grid.Row="4"
+               Grid.Column="1"
+               Width="100"
+               Height="100"
+               HorizontalAlignment="Left"
+               Margin="20,0,0,0"
+               Source="Assets/StoreLogo.png" Stretch="UniformToFill" />
+
+        <TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   Text="ToggleButton" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="5"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <ToggleButton Name="myToggleButton"
+                          Content="ToggleBtn"
+                          Click="ToggleButton_Click"/>
+            <TextBlock Name="ToggleButtonState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   Text="ToggleSwitch" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="6"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <ToggleSwitch Name="myToggleSwitch" 
+                          OffContent="ToggleSwitch Off" 
+                          OnContent="ToggleSwitch On" 
+                          Toggled="myToggleSwitch_Toggled" 
+                          >
+            </ToggleSwitch>
+                <TextBlock Name="ToggleSwitchState" />
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="7"
+                   Grid.Column="0"
+                   Text="TimePicker" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="7"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <TimePicker Name="myTimePicker"
+                        ClockIdentifier="24HourClock" 
+                        TimeChanged="TimePicker_TimeChanged" 
+                        />
+            <TextBlock Name="TimePickerState" />
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="8"
+                   Grid.Column="0"
+                   Text="DatePicker" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="8"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <DatePicker Name="myDatePicker"
+                        CalendarIdentifier="TaiwanCalendar" 
+                        DateChanged="DatePicker_DateChanged"/>
+            <TextBlock Name="DatePickerState" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="9"
+                   Grid.Column="0"
+                   Text="CalendarDatePicker" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="9"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <CalendarDatePicker Name="myCalendarDatePicker" 
+                                CalendarIdentifier="TaiwanCalendar" 
+                                PlaceholderText="click here to select a date"
+                                DateChanged="myCalendarDatePicker_DateChanged"
+                        />
+            <TextBlock Name="CalendarDatePickerState" />
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="10"
+                   Grid.Column="0"
+                   Text="CalendarView" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="10"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <CalendarView Name="myCalendarView" 
+                          SelectionMode="Multiple" 
+                          CalendarIdentifier="TaiwanCalendar" 
+                          SelectedDatesChanged="myCalendarView_SelectedDatesChanged"
+                          />
+            <TextBlock Name="CalendarViewState" />
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="11"
+                   Grid.Column="0"
+                   Text="FlyoutButton" 
+                   VerticalAlignment="Center"/>
+        <Button Grid.Row="11"
+                Grid.Column="1"
+                Margin="20,0,0,0"
+                Content="FlyoutButton">
+            <Button.Flyout>
+                <!--<Flyout x:Name="myFlyout">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Button Flyout Example."/>
+                        <Button HorizontalAlignment="Right" Content="OK" Click="Button_Click"/>
+                    </StackPanel>
+                </Flyout>-->
+                <MenuFlyout x:Name="myFlyout">
+                    <MenuFlyoutItem Text="MenuOne" Click="Button_Click"/>
+                    <MenuFlyoutItem Text="MenuTwo" Click="Button_Click"/>
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutSubItem Text="MenuThree">
+                        <MenuFlyoutSubItem.Items>
+                            <MenuFlyoutItem Text="MenuFour" Click="Button_Click"/>
+                            <MenuFlyoutSubItem Text="MenuFive">
+                                <MenuFlyoutSubItem.Items>
+                                    <MenuFlyoutItem Text="MenuSix" Click="Button_Click"/>
+                                    <MenuFlyoutItem Text="MenuSeven" Click="Button_Click"/>
+                                </MenuFlyoutSubItem.Items>
+                            </MenuFlyoutSubItem>
+                        </MenuFlyoutSubItem.Items>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSeparator />
+
+                    <ToggleMenuFlyoutItem   Name="myToggleMenuFlyout"
+                                            Text="ToggleMenuFlyout" 
+                                            Tapped="myToggleMenuFlyout_Tapped"/>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button>
+
+        <TextBlock Grid.Row="12"
+                   Grid.Column="0"
+                   Text="AutoSuggestBox" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="12"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,0,0,0"
+                    >
+            <AutoSuggestBox Name="myAutoSuggestBox"
+                            QueryIcon="Find"
+                            Width="200" 
+                            TextChanged="myAutoSuggestBox_TextChanged" 
+                            PlaceholderText="Click here to search" 
+                            />
+            <TextBlock Name="AutoSuggestBoxState" />
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="13"
+                   Grid.Column="0"
+                   Text="Slider and ProgressBar" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="13"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    Margin="20,0,0,0"
+                    >
+            <Slider Name="mySlider"  Width="200"/>
+            <ProgressBar Width="200" Value="{x:Bind mySlider.Value, Mode=OneWay}"/>
+            <!--<TextBlock Name="AutoSuggestBoxState" />-->
+        </StackPanel>
+
+        
+        <TextBlock Grid.Row="14"
+                   Grid.Column="0"
+                   Text="ProgressRing" 
+                   VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="14"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    Margin="20,0,0,0"
+                    >
+            <ProgressRing IsActive="True" Width="40" Height="40"/>
+            <!--<TextBlock Name="AutoSuggestBoxState" />-->
+        </StackPanel>
+    </Grid>
+</Page>
