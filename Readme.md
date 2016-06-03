@@ -12,3 +12,5 @@ XAML控件<br>
 汉堡菜单<br>
 ### GoNutsPrep
 Frame切换，Button Flyout，Grid嵌套，Style以及TimePicker/CalendarDatePicker/Slider组件等<br>
+###AdaptiveChallenge
+汉堡菜单（SplitView）、DataBinding、VisualStateManager、Blend、GridView、DataTemplate
